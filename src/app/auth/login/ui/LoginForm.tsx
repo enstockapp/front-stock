@@ -1,7 +1,6 @@
 'use client'
 
 import { useActionState, useEffect } from 'react'
-import { useFormStatus } from 'react-dom'
 
 import clsx from 'clsx'
 import { authenticate } from '@/src/actions/auth/login'
@@ -44,24 +43,16 @@ export const LoginForm = () => {
 				)}
 			</div>
 
-			{isPending ? <>Loading...</> : <LoginButton />}
+			<button
+				type="submit"
+				className={clsx({
+					'btn-primary': !isPending,
+					'btn-disabled': isPending,
+				})}
+				disabled={isPending}
+			>
+				Login
+			</button>
 		</form>
-	)
-}
-
-function LoginButton() {
-	const { pending } = useFormStatus()
-
-	return (
-		<button
-			type="submit"
-			className={clsx({
-				'btn-primary': !pending,
-				'btn-disabled': pending,
-			})}
-			disabled={pending}
-		>
-			Login
-		</button>
 	)
 }
