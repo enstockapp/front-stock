@@ -9,6 +9,7 @@ import { IoPerson, IoSettingsSharp } from 'react-icons/io5'
 import { MdCategory, MdOutlineShoppingCartCheckout } from 'react-icons/md'
 import { BiSolidCategory } from 'react-icons/bi'
 import type { IconType } from 'react-icons/lib'
+import { routesPath } from '@/src/constants'
 
 export interface IMenuItem {
 	title: string
@@ -23,7 +24,7 @@ export interface ISidebarGroup {
 
 export const settingsItem = {
 	title: 'Ajustes',
-	url: '#',
+	url: routesPath.settings,
 	icon: IoSettingsSharp,
 }
 
@@ -34,7 +35,7 @@ export const sidebarGroups: ISidebarGroup[] = [
 		items: [
 			{
 				title: 'Home',
-				url: '#',
+				url: routesPath.home,
 				icon: FaHouse,
 			},
 		],
@@ -44,32 +45,32 @@ export const sidebarGroups: ISidebarGroup[] = [
 		items: [
 			{
 				title: 'Inventario actual',
-				url: '#',
+				url: routesPath.inventory,
 				icon: FaBoxesStacked,
 			},
 			{
 				title: 'Ajustes de inventario',
-				url: '#',
+				url: routesPath.inventoryAdjustment,
 				icon: FaBoxOpen,
 			},
 			{
 				title: 'Compras',
-				url: '#',
+				url: routesPath.purchases,
 				icon: FaTruckRampBox,
 			},
 			{
 				title: 'Ventas',
-				url: '#',
+				url: routesPath.sales,
 				icon: MdOutlineShoppingCartCheckout,
 			},
 			{
 				title: 'Categorías',
-				url: '#',
+				url: routesPath.categories,
 				icon: MdCategory,
 			},
 			{
 				title: 'Variantes',
-				url: '#',
+				url: routesPath.variants,
 				icon: BiSolidCategory,
 			},
 		],
@@ -79,12 +80,12 @@ export const sidebarGroups: ISidebarGroup[] = [
 		items: [
 			{
 				title: 'Proveedores',
-				url: '#',
+				url: routesPath.suppliers,
 				icon: FaShop,
 			},
 			{
 				title: 'Clientes',
-				url: '#',
+				url: routesPath.customers,
 				icon: IoPerson,
 			},
 		],

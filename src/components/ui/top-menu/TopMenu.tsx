@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import { IoPersonCircleOutline } from 'react-icons/io5'
 import { logout } from '@/src/actions/auth'
+import { routesPath } from '@/src/constants'
 import {
 	ListItem,
 	NavigationMenu,
@@ -23,7 +24,7 @@ export const TopMenu = () => {
 			<NavigationMenuList className="space-x-2">
 				{/* Add sell */}
 				<NavigationMenuItem>
-					<Link href="/" legacyBehavior passHref>
+					<Link href={routesPath.sales_new} legacyBehavior passHref>
 						<NavigationMenuLink className={navigationMenuTriggerStyle()}>
 							Agregar venta
 						</NavigationMenuLink>
@@ -36,8 +37,8 @@ export const TopMenu = () => {
 					</NavigationMenuTrigger>
 					<NavigationMenuContent>
 						<ul className="p-1 md:w-[180px]">
-							<ListItem title="Perfil"></ListItem>
-							<ListItem title="Ajustes"></ListItem>
+							<ListItem title="Perfil" href={routesPath.profile}></ListItem>
+							<ListItem title="Ajustes" href={routesPath.settings}></ListItem>
 							<ListItem
 								title="Cerrar sesión"
 								onClick={() => logout()}

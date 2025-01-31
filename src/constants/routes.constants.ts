@@ -1,0 +1,16 @@
+export const routesPath = {
+	home: '/home',
+	inventory: '/inventory',
+	inventoryAdjustment: '/inventory-adjustment',
+	purchases: '/purchases',
+	sales: '/sales',
+	sales_new: '/sales/new',
+	categories: '/categories',
+	variants: '/variants',
+	suppliers: '/suppliers',
+	customers: '/customers',
+	settings: '/settings',
+	login: '/login',
+	profile: '/profile',
+	landing: '/landing',
+}
